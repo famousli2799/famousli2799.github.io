@@ -23,22 +23,30 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Wed, 14 Jun 2023 23:19:33 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 14 Jun 2023 23:30:44 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://example.com/rss.xml" />
         
         
             <item>
-                <title>Second</title>
+                <title>DDPG算法</title>
                 <link>https://example.com/post/second/</link>
                 <guid isPermaLink="true">https://example.com/post/second/</guid>
-                <pubDate>Tue, 13 Jun 2023 23:44:55 &#43;0800</pubDate>
+                <pubDate>Wed, 14 Jun 2023 00:00:00 &#43;0000</pubDate>
                 
                     <author>reuixiy@gmail.com (reuixiy)</author>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
-                    <description>&lt;p&gt;&lt;img src=&#34;https://llc-typora.oss-cn-hangzhou.aliyuncs.com/typora/image-20230604111934353.png&#34; alt=&#34;image-20230604111934353&#34;&gt;&lt;/p&gt;
+                    <description>&lt;h1 id=&#34;ddpg算法&#34;&gt;DDPG算法&lt;/h1&gt;
+&lt;p&gt;DDPG算法一共包含了四个网络，分别是：Actor当前网络，Actor目标网络，Critic当前网络，Critic目标网络，2个Actor网络的结构相同，2个Critic网络的结构相同，这四个网络的功能如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Actor当前网络：负责策略网络参数 $\theta$ 的迭代更新，负责根据当前状态 S 选择当前动作 A，用于和环境交互生成 S&#39; 和 R。&lt;/li&gt;
+&lt;li&gt;Actor目标网络：负责根据经验回放池中采样的下一状态 S&#39; 选择最优下一动作 A&#39;，网络参数 $\theta&#39;$ 定期从 $\theta$ 中复制。&lt;/li&gt;
+&lt;li&gt;Critic当前网络：负责价值网络参数 $w$ 的迭代更新，负责计算当前Q值 Q(S,A,w).&lt;/li&gt;
+&lt;li&gt;Critic目标网络：负责计算目标Q值 $y_i=R+\gamma Q&#39;(S&#39;,A&#39;,w&#39;)$ 中的 $Q&#39;(S&#39;,A&#39;,w&#39;)$ 部分，网络参数 $w&#39;$ 定期从  $w$ 复制。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://llc-typora.oss-cn-hangzhou.aliyuncs.com/typora/image-20230614232755640.png&#34; alt=&#34;image-20230614232755640&#34;&gt;&lt;/p&gt;
 </description>
                 
                 
@@ -46,6 +54,14 @@
                 
                 
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://example.com/categories/%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">深度强化学习</category>
+                                
+                            
                         
                     
                         

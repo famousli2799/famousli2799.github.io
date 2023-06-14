@@ -9,7 +9,7 @@
     <channel>
         <title>李清华的博客</title>
         <link>https://famousli.cn/</link>
-        <description>MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</description>
+        <description>李清华的博客</description>
         <generator>Hugo 0.113.0 https://gohugo.io/</generator>
         
             <language>zh-CN</language>
@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Thu, 15 Jun 2023 01:00:51 &#43;0800</lastBuildDate>
+        <lastBuildDate>Thu, 15 Jun 2023 01:28:27 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://famousli.cn/rss.xml" />
         

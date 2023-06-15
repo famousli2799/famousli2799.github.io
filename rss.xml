@@ -7,7 +7,7 @@
 
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Welcome | 李清华的博客</title>
+        <title>李清华的博客</title>
         <link>https://famousli.cn/</link>
         <description>李清华的博客</description>
         <generator>Hugo 0.113.0 https://gohugo.io/</generator>
@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Thu, 15 Jun 2023 13:07:06 &#43;0800</lastBuildDate>
+        <lastBuildDate>Thu, 15 Jun 2023 13:18:04 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://famousli.cn/rss.xml" />
         
@@ -80,6 +80,7 @@
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
                     <description>&lt;h1 id=&#34;first-blog&#34;&gt;first blog&lt;/h1&gt;
+&lt;p&gt;welcome my blog!&lt;/p&gt;
 </description>
                 
                 

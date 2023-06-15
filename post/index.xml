@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on LoveIt</title>
+    <link>https://example.com/post/</link>
+    <description>Recent content in Posts on LoveIt</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Wed, 14 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DDPG算法</title>
+      <link>https://example.com/post/second/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/post/second/</guid>
+      <description>DDPG算法 DDPG算法一共包含了四个网络，分别是：Actor当前网络，Actor目标网络，Critic当前网络，Critic目标网络，2个Actor网络的结构相同，2个Critic网络的结构相同，这四个网络的功能如下：
+Actor当前网络：负责策略网络参数 $\theta$ 的迭代更新，负责根据当前状态 S 选择当前动作 A，用于和环境交互生成 S&amp;rsquo; 和 R。 Actor目标网络：负责根据经验回放池中采样的下一状态 S&amp;rsquo; 选择最优下一动作 A&amp;rsquo;，网络参数 $\theta&amp;rsquo;$ 定期从 $\theta$ 中复制。 Critic当前网络：负责价值网络参数 $w$ 的迭代更新，负责计算当前Q值 Q(S,A,w). Critic目标网络：负责计算目标Q值 $y_i=R+\gamma Q&amp;rsquo;(S&amp;rsquo;,A&amp;rsquo;,w&amp;rsquo;)$ 中的 $Q&amp;rsquo;(S&amp;rsquo;,A&amp;rsquo;,w&amp;rsquo;)$ 部分，网络参数 $w&amp;rsquo;$ 定期从 $w$ 复制。 </description>
+    </item>
+    
+    <item>
+      <title>Firstblog</title>
+      <link>https://example.com/post/firstblog/</link>
+      <pubDate>Tue, 13 Jun 2023 22:12:19 +0800</pubDate>
+      
+      <guid>https://example.com/post/firstblog/</guid>
+      <description>first blog </description>
+    </item>
+    
+  </channel>
+</rss>

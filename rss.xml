@@ -23,15 +23,15 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sat, 17 Jun 2023 17:18:14 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sat, 17 Jun 2023 17:20:54 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://famousli.cn/rss.xml" />
         
         
             <item>
                 <title>DDPG算法</title>
-                <link>https://famousli.cn/post/drl-ddpg/</link>
-                <guid isPermaLink="true">https://famousli.cn/post/drl-ddpg/</guid>
+                <link>https://famousli.cn/tech/drl-ddpg/</link>
+                <guid isPermaLink="true">https://famousli.cn/tech/drl-ddpg/</guid>
                 <pubDate>Sat, 17 Jun 2023 16:52:04 &#43;0800</pubDate>
                 
                     <author>famousli2799@gmail.com (李清华)</author>

@@ -23,64 +23,48 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Thu, 15 Jun 2023 13:18:04 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sat, 17 Jun 2023 17:03:17 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://famousli.cn/rss.xml" />
         
         
             <item>
-                <title>DDPGç®—æ³•</title>
-                <link>https://famousli.cn/post/second/</link>
-                <guid isPermaLink="true">https://famousli.cn/post/second/</guid>
-                <pubDate>Wed, 14 Jun 2023 00:00:00 &#43;0000</pubDate>
+                <title>DRL DDPG</title>
+                <link>https://famousli.cn/post/drl-ddpg/</link>
+                <guid isPermaLink="true">https://famousli.cn/post/drl-ddpg/</guid>
+                <pubDate>Sat, 17 Jun 2023 16:52:04 &#43;0800</pubDate>
                 
                     <author>famousli2799@gmail.com (ææ¸…å)</author>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
-                    <description>&lt;h1 id=&#34;ddpgç®—æ³•&#34;&gt;DDPGç®—æ³•&lt;/h1&gt;
-&lt;p&gt;DDPGç®—æ³•ä¸€å…±åŒ…å«äº†å››ä¸ªç½‘ç»œï¼Œåˆ†åˆ«æ˜¯ï¼šActorå½“å‰ç½‘ç»œï¼ŒActorç›®æ ‡ç½‘ç»œï¼ŒCriticå½“å‰ç½‘ç»œï¼ŒCriticç›®æ ‡ç½‘ç»œï¼Œ2ä¸ªActorç½‘ç»œçš„ç»“æ„ç›¸åŒï¼Œ2ä¸ªCriticç½‘ç»œçš„ç»“æ„ç›¸åŒï¼Œè¿™å››ä¸ªç½‘ç»œçš„åŠŸèƒ½å¦‚ä¸‹ï¼š&lt;/p&gt;
+                    <description>&lt;h1 id=&#34;ddpgã·¨&#34;&gt;DDPGËã·¨&lt;/h1&gt;
+&lt;p&gt;DDPGËã·¨Ò»¹²°üº¬ÁËËÄ¸öÍøÂç£¬·Ö±ğÊÇ£ºActorÍøÂç£¬ActorÄ¿±êÍøÂç£¬CriticÍøÂç£¬CriticÄ¿±êÍøÂç£¬2¸öActor ÍøÂçµÄ½á¹¹ÏàÍ¬£¬2¸öCriticÍøÂçµÄ½á¹¹ÏàÍ¬£¬ËÄ¸öÍøÂçµÄ¹¦ÄÜÈçÏÂ£º&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Actorå½“å‰ç½‘ç»œï¼šè´Ÿè´£ç­–ç•¥ç½‘ç»œå‚æ•° $\theta$ çš„è¿­ä»£æ›´æ–°ï¼Œè´Ÿè´£æ ¹æ®å½“å‰çŠ¶æ€ S é€‰æ‹©å½“å‰åŠ¨ä½œ Aï¼Œç”¨äºå’Œç¯å¢ƒäº¤äº’ç”Ÿæˆ S&#39; å’Œ Rã€‚&lt;/li&gt;
-&lt;li&gt;Actorç›®æ ‡ç½‘ç»œï¼šè´Ÿè´£æ ¹æ®ç»éªŒå›æ”¾æ± ä¸­é‡‡æ ·çš„ä¸‹ä¸€çŠ¶æ€ S&#39; é€‰æ‹©æœ€ä¼˜ä¸‹ä¸€åŠ¨ä½œ A&#39;ï¼Œç½‘ç»œå‚æ•° $\theta&#39;$ å®šæœŸä» $\theta$ ä¸­å¤åˆ¶ã€‚&lt;/li&gt;
-&lt;li&gt;Criticå½“å‰ç½‘ç»œï¼šè´Ÿè´£ä»·å€¼ç½‘ç»œå‚æ•° $w$ çš„è¿­ä»£æ›´æ–°ï¼Œè´Ÿè´£è®¡ç®—å½“å‰Qå€¼ Q(S,A,w).&lt;/li&gt;
-&lt;li&gt;Criticç›®æ ‡ç½‘ç»œï¼šè´Ÿè´£è®¡ç®—ç›®æ ‡Qå€¼ $y_i=R+\gamma Q&#39;(S&#39;,A&#39;,w&#39;)$ ä¸­çš„ $Q&#39;(S&#39;,A&#39;,w&#39;)$ éƒ¨åˆ†ï¼Œç½‘ç»œå‚æ•° $w&#39;$ å®šæœŸä»  $w$ å¤åˆ¶ã€‚&lt;/li&gt;
+&lt;li&gt;ActorÍøÂç£º¸ºÔğ²ßÂÔÍøÂç²ÎÊı $\theta$ µÄµü´ú¸üĞÂ£¬¸ºÔğ¸ù¾İµ±Ç°×´Ì¬ S Ñ¡Ôñµ±Ç°¶¯×÷ A£¬ÓÃÓÚºÍ»·¾³½»»¥Éú³É S&#39; ºÍ R¡£&lt;/li&gt;
+&lt;li&gt;ActorÄ¿±êÍøÂç£º¸ºÔğ¸ù¾İ¾­Ñé»Ø·Å³ØÖĞ²ÉÑùµÄÏÂÒ»×´Ì¬ S&#39; Ñ¡Ôñ×îÓÅÏÂÒ»¶¯×÷ A&#39;£¬ÍøÂç²ÎÊı $\theta&#39;$ ¶¨ÆÚ´Ó $\theta$ ÖĞ¸üĞÂ¡£&lt;/li&gt;
+&lt;li&gt;CriticÍøÂç£º¸ºÔğ¼ÛÖµÍøÂç²ÎÊı $w$ µÄµü´ú¸üĞÂ£¬¸ºÔğ¼ÆËãµ±Ç°QÖµ $Q(S,A,w)$¡£&lt;/li&gt;
+&lt;li&gt;CriticÄ¿±êÍøÂç£º¸ºÔğ¼ÆËãÄ¿±êQÖµ $y_i=R+\gamma Q&#39;(S&#39;,A&#39;,w&#39;)$ ÖĞµÄ $Q&#39;(S&#39;,A&#39;,w&#39;)$ ²¿·Ö£¬ÍøÂç²ÎÊı $w&#39;$ ¶¨ÆÚ´Ó  $w$ ¸üĞÂ¡£&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://llc-typora.oss-cn-hangzhou.aliyuncs.com/typora/image-20230614232755640.png&#34; alt=&#34;image-20230614232755640&#34;&gt;&lt;/p&gt;
-</description>
-                
-                
-                
-                
-                
-                    
-                        
-                            
-                                
-                                
-                                
-                                    <category domain="https://famousli.cn/categories/%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">æ·±åº¦å¼ºåŒ–å­¦ä¹ </category>
-                                
-                            
-                        
-                    
-                        
-                    
-                
-            </item>
-        
-            <item>
-                <title>Firstblog</title>
-                <link>https://famousli.cn/post/firstblog/</link>
-                <guid isPermaLink="true">https://famousli.cn/post/firstblog/</guid>
-                <pubDate>Tue, 13 Jun 2023 22:12:19 &#43;0800</pubDate>
-                
-                    <author>famousli2799@gmail.com (ææ¸…å)</author>
-                
-                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
-                
-                    <description>&lt;h1 id=&#34;first-blog&#34;&gt;first blog&lt;/h1&gt;
-&lt;p&gt;welcome my blog!&lt;/p&gt;
+&lt;h2 id=&#34;ddpgã·¨-1&#34;&gt;DDPGËã·¨Á÷³Ì&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;ÏÈ³õÊ¼»¯ Actor ºÍ Critic¡£È»ºó°Ñ Actor ºÍ Critic µÄÍøÂç²ÎÊı¸´ÖÆµ½Ä¿±ê Actor ºÍÄ¿±ê Critic ÍøÂç¡£&lt;/li&gt;
+&lt;li&gt;½«ÍøÂç»·¾³×´Ì¬ S ÊäÈë ActorÍøÂçµÃµ½¶¯×÷ A£¬¶Ô»·¾³Ê©¼Ó¶¯×÷ A£¬»·¾³·µ»ØÏÂÒ»Ê±¿ÌµÄ×´Ì¬ S&#39; ÒÔ¼°½±Àø R¡£²¢½«Õâ¸öËÄÔª×é $£¨S,A,R,S&#39;£©$ ´æÈë¾­Ñé³Ø¡£&lt;/li&gt;
+&lt;li&gt;Critic ÍøÂçµÄ¸üĞÂ¡£ÔÚ¾­Ñé³ØÖĞ»ıÀÛÒ»¶¨ÊıÁ¿µÄÊı¾İºó£¬È¡³ö mini-batch ´óĞ¡µÄÊı¾İ¿é£¬ÊäÈëµ½ Critic ÍøÂçÖĞ£¬µÃµ½¶¯×÷¼ÛÖµº¯Êı$Q(S,A,w)$¡£ÔÙ½«ÏÂÒ»Ê±¿Ì×´Ì¬ S&#39; ¡¢¶¯×÷ A&#39; ºÍÉÏÒ»Ê±¿ÌµÄ½±Àø R Ò»ÆğÊäÈëÄ¿±ê Critic ÍøÂçÖĞ£¬µÃµ½Ä¿±ê Critic ÍøÂçµÄ$Q_{target}=R+Q&#39;(S&#39;,A&#39;)$¡£Critic×÷ÎªÆÀÎ¯£¬Ò»¿ªÊ¼Ò²²»ÖªµÀ Actor Êä³öµÄ¶¯×÷ÊÇ·ñ×ã¹»ºÃ£¬ËüÒ²ĞèÒªÒ»²½Ò»²½Ñ§Ï°¸ø³ö×¼È·µÄ´ò·Ö£¬ËùÒÔ½èÖúÓÚÄ¿±êÍøÂçÄâºÏµÄÏÂÒ»Ê±¿ÌµÄ¼ÛÖµ $Q&#39;$ £¬ÒÔ¼°ÕæÊµµÄÊÕÒæ $R$£¬ÎÒÃÇ¿ÉÒÔµÃµ½ $Q_{target}$£¬ÈÃ$Q_{target}$¼õÈ¥µ±Ç°$Q$Çó¾ù·½²î¹¹Ôì³öLoss£¬ÔÙ½øĞĞÌİ¶ÈÏÂ½µÀ´¸üĞÂ Critic ÍøÂç²ÎÊı¡£&lt;/li&gt;
+&lt;li&gt;Actor ÍøÂçµÄ¸üĞÂ¡£ActorµÄÄ¿±êÊÇÕÒµ½×îÓÅ¶¯×÷ A Ê¹µÃ¶¯×÷¼ÛÖµ Q Êä³ö×î´ó¡£Òò´Ë£¬½«Í¨¹ı½«×´Ì¬ S ÒÔ¼° Actor ÍøÂçÊä³öµÄ¶¯×÷ A ´«Èë¸ø Critic µÃµ½µÄ½á¹û$Q(S,A,w)$Ç°Ãæ¼Ó¸ººÅ×÷ÎªËğÊ§º¯Êı£¬Ö®ºó¶ÔÆä½øĞĞÌİ¶ÈÏÂ½µ½ø¶øÊµÏÖ Actor ÍøÂç²ÎÊıµÄ¸üĞÂ¡£&lt;/li&gt;
+&lt;li&gt;Ä¿±ê Actor ÍøÂçºÍÄ¿±ê Critic ÍøÂçµÄ¸üĞÂ¡£ÎÒÃÇÃ¿¸ôÒ»¶ÎÊ±¼ä¾Í°Ñ Actor ÍøÂçºÍ Critic ÍøÂçµÄ²ÎÊı£¬ÄÃÈ¥½øĞĞÈí¸üĞÂÄ¿±ê ActorÍøÂçºÍÄ¿±êCritic ÍøÂç¡£&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;×¢Òâ£ºÁ½¸öCritic ÍøÂçµÄÊäÈë²»Í¬¡£Critic ÍøÂçÖĞ£¬¶¯×÷ºÍ×´Ì¬ĞèÒªÒ»ÆğÊäÈëµ½ Critic ÖĞ£»Critic Ä¿±êÍøÂçÖĞ£¬ĞèÒª½«¶¯×÷¡¢×´Ì¬ÒÔ¼°ÉÏÒ»Ê±¿ÌµÄ½±ÀøÒ»ÆğÊäÈëCritic Ä¿±êÍøÂç¡£&lt;/p&gt;
+&lt;img src=&#34;https://llc-typora.oss-cn-hangzhou.aliyuncs.com/typora/81be15e678ee87da6e19b066d0dcb34.jpg&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h2 id=&#34;ddpgØ¼&#34;&gt;DDPG¹Ø¼ü¼¼Êõ&lt;/h2&gt;
+&lt;p&gt;DDPGËã·¨Ö÷Òª°üÀ¨ÒÔÏÂÈı¸ö¹Ø¼ü¼¼Êõ£º&lt;/p&gt;
+&lt;p&gt;£¨1£©¾­Ñé»Ø·Å£ºÖÇÄÜÌå½«µÃµ½µÄ¾­ÑéÊı¾İ·ÅÈë Memory Pool ÖĞ£¬¸üĞÂÍøÂç²ÎÊıÊ±°´ÕÕÅúÁ¿²ÉÑù¡£&lt;/p&gt;
+&lt;p&gt;£¨2£©Ä¿±êÍøÂç£ºÔÚ Actor ÍøÂçºÍ Critic ÍøÂçÍâÔÙÊ¹ÓÃÒ»Ì×ÓÃÓÚ¹À¼ÆÄ¿±êµÄTarget ActorÍøÂçºÍTarget CriticÍøÂç¡£ÔÚ¸üĞÂÄ¿±êÍøÂçÊ±£¬ÎªÁË±ÜÃâ²ÎÊı¸üĞÂ¹ı¿ì£¬²ÉÓÃÈí¸üĞÂ·½Ê½¡£&lt;/p&gt;
+&lt;p&gt;£¨3£©ÔëÉùÌ½Ë÷£ºÈ·¶¨ĞÔ²ßÂÔÊä³öµÄ¶¯×÷ÎªÈ·¶¨ĞÔ¶¯×÷£¬È±·¦¶Ô»·¾³µÄÌ½Ë÷¡£ÔÚÑµÁ·½×¶Î£¬¸øActorÍøÂçÊä³öµÄ¶¯×÷¼ÓÈëÔëÉù£¬´Ó¶øÈÃÖÇÄÜÌå¾ß±¸Ò»¶¨µÄÌ½Ë÷ÄÜÁ¦¡£&lt;/p&gt;
+&lt;h2 id=&#34;Î¿&#34;&gt;²Î¿¼&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/398288352&#34;&gt;Ç¿»¯Ñ§Ï°ÈëÃÅ¡ª¡ªÉîÈëÀí½âDDPG&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://juejin.cn/post/6869355403637964813&#34;&gt;Ç¿»¯Ñ§Ï°13¡ª¡ªDeep Deterministic Policy Gradient£¨DDPG£©Ô­ÀíÓëÊµÏÖ&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/weixin_46133643/article/details/124356983&#34;&gt;Éî¶ÈÇ¿»¯Ñ§Ï°-DDPGËã·¨Ô­ÀíÓë´úÂë&lt;/a&gt;&lt;/p&gt;
 </description>
                 
                 

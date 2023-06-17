@@ -2,23 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://famousli.cn/categories/</loc>
-    <lastmod>2023-06-14T23:30:42+08:00</lastmod>
-  </url><url>
-    <loc>https://famousli.cn/post/second/</loc>
-    <lastmod>2023-06-14T23:30:42+08:00</lastmod>
+    <loc>https://famousli.cn/post/drl-ddpg/</loc>
+    <lastmod>2023-06-17T16:53:41+08:00</lastmod>
   </url><url>
     <loc>https://famousli.cn/post/</loc>
-    <lastmod>2023-06-15T13:12:09+08:00</lastmod>
+    <lastmod>2023-06-17T16:53:41+08:00</lastmod>
   </url><url>
     <loc>https://famousli.cn/</loc>
-    <lastmod>2023-06-15T13:12:09+08:00</lastmod>
+    <lastmod>2023-06-17T16:53:41+08:00</lastmod>
   </url><url>
-    <loc>https://famousli.cn/categories/%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2023-06-14T23:30:42+08:00</lastmod>
-  </url><url>
-    <loc>https://famousli.cn/post/firstblog/</loc>
-    <lastmod>2023-06-15T13:12:09+08:00</lastmod>
+    <loc>https://famousli.cn/categories/</loc>
   </url><url>
     <loc>https://famousli.cn/tags/</loc>
   </url>

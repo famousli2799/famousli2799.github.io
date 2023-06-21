@@ -21,13 +21,13 @@
             <webMaster>famousli2799@gmail.com (李清华)</webMaster>
         
         
-        <lastBuildDate>Sat, 17 Jun 2023 22:37:25 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 21 Jun 2023 11:01:00 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://famousli.cn/rss.xml" />
         
         
             <item>
-                <title>移动边缘计算 | 论文阅读笔记（三）</title>
+                <title>论文阅读笔记（三）| Adaptive resource allocation in future wireless networks with blockchain and mobile edge computing</title>
                 <link>https://famousli.cn/notes/mecnote3/</link>
                 <guid isPermaLink="true">https://famousli.cn/notes/mecnote3/</guid>
                 <pubDate>Sat, 17 Jun 2023 20:58:47 &#43;0800</pubDate>
@@ -185,7 +185,7 @@
             </item>
         
             <item>
-                <title>移动边缘计算 | 论文阅读笔记（二）</title>
+                <title>论文阅读笔记（二）| Deep Reinforcement Learning for Online Offloading in Wireless Powered Mobile-Edge Computing Networks</title>
                 <link>https://famousli.cn/notes/mecnote2/</link>
                 <guid isPermaLink="true">https://famousli.cn/notes/mecnote2/</guid>
                 <pubDate>Sat, 17 Jun 2023 19:04:14 &#43;0800</pubDate>
@@ -301,7 +301,7 @@
             </item>
         
             <item>
-                <title>移动边缘计算 | 论文阅读笔记（一）</title>
+                <title>论文阅读笔记（一）| BeCome: Blockchain-Enabled Computation Offloading for IoT in Mobile Edge Computing</title>
                 <link>https://famousli.cn/notes/mecnote1/</link>
                 <guid isPermaLink="true">https://famousli.cn/notes/mecnote1/</guid>
                 <pubDate>Sat, 17 Jun 2023 19:00:14 &#43;0800</pubDate>

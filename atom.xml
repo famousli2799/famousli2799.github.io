@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">李清华的博客</title>
     <subtitle type="html">李清华的博客</subtitle>
-    <updated>2023-06-17T22:37:25&#43;08:00</updated>
+    <updated>2023-06-21T11:01:00&#43;08:00</updated>
     <id>https://famousli.cn/</id>
     <link rel="alternate" type="text/html" href="https://famousli.cn/" />
     <link rel="self" type="application/atom&#43;xml" href="https://famousli.cn/atom.xml" />
@@ -17,10 +17,10 @@
     
     <generator uri="https://gohugo.io/" version="0.113.0">Hugo</generator>
         <entry>
-            <title type="text">移动边缘计算 | 论文阅读笔记（三）</title>
+            <title type="text">论文阅读笔记（三）| Adaptive resource allocation in future wireless networks with blockchain and mobile edge computing</title>
             <link rel="alternate" type="text/html" href="https://famousli.cn/notes/mecnote3/" />
             <id>https://famousli.cn/notes/mecnote3/</id>
-            <updated>2023-06-17T22:35:32&#43;08:00</updated>
+            <updated>2023-06-21T10:51:44&#43;08:00</updated>
             <published>2023-06-17T20:58:47&#43;08:00</published>
             <author>
                     <name>李清华</name>
@@ -178,10 +178,10 @@
         </entry>
     
         <entry>
-            <title type="text">移动边缘计算 | 论文阅读笔记（二）</title>
+            <title type="text">论文阅读笔记（二）| Deep Reinforcement Learning for Online Offloading in Wireless Powered Mobile-Edge Computing Networks</title>
             <link rel="alternate" type="text/html" href="https://famousli.cn/notes/mecnote2/" />
             <id>https://famousli.cn/notes/mecnote2/</id>
-            <updated>2023-06-17T21:50:27&#43;08:00</updated>
+            <updated>2023-06-21T10:51:21&#43;08:00</updated>
             <published>2023-06-17T19:04:14&#43;08:00</published>
             <author>
                     <name>李清华</name>
@@ -297,10 +297,10 @@
         </entry>
     
         <entry>
-            <title type="text">移动边缘计算 | 论文阅读笔记（一）</title>
+            <title type="text">论文阅读笔记（一）| BeCome: Blockchain-Enabled Computation Offloading for IoT in Mobile Edge Computing</title>
             <link rel="alternate" type="text/html" href="https://famousli.cn/notes/mecnote1/" />
             <id>https://famousli.cn/notes/mecnote1/</id>
-            <updated>2023-06-17T22:13:16&#43;08:00</updated>
+            <updated>2023-06-21T10:49:40&#43;08:00</updated>
             <published>2023-06-17T19:00:14&#43;08:00</published>
             <author>
                     <name>李清华</name>

@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">李清华的博客</title>
     <subtitle type="html">李清华的博客</subtitle>
-    <updated>2023-06-21T11:05:50&#43;08:00</updated>
+    <updated>2023-11-03T11:33:26&#43;08:00</updated>
     <id>https://famousli.cn/</id>
     <link rel="alternate" type="text/html" href="https://famousli.cn/" />
     <link rel="self" type="application/atom&#43;xml" href="https://famousli.cn/atom.xml" />
@@ -17,144 +17,47 @@
     
     <generator uri="https://gohugo.io/" version="0.113.0">Hugo</generator>
         <entry>
-            <title type="text">论文阅读笔记（三）| Adaptive resource allocation in future wireless networks with blockchain and mobile edge computing</title>
-            <link rel="alternate" type="text/html" href="https://famousli.cn/notes/mecnote3/" />
-            <id>https://famousli.cn/notes/mecnote3/</id>
-            <updated>2023-06-21T10:51:44&#43;08:00</updated>
-            <published>2023-06-17T20:58:47&#43;08:00</published>
+            <title type="text">多智能体深度强化学习</title>
+            <link rel="alternate" type="text/html" href="https://famousli.cn/tech/mdrl/" />
+            <id>https://famousli.cn/tech/mdrl/</id>
+            <updated>2023-06-21T11:00:48&#43;08:00</updated>
+            <published>2023-06-21T10:52:23&#43;08:00</published>
             <author>
                     <name>李清华</name>
                     <uri>https://famousli.cn/</uri>
                     <email>famousli2799@gmail.com</email>
                     </author>
-            <summary type="html">标题：Adaptive resource allocation in future wireless networks with blockchain and mobile edge computing（区块链和移动边缘计算……</summary>
+            <summary type="html">多智能体深度强化学习（Multi-agent Deep Reinforcement Learning，MDRL） 基本概念……</summary>
             
-                <content type="html">&lt;p&gt;标题：Adaptive resource allocation in future wireless networks with blockchain and mobile edge computing（区块链和移动边缘计算在未来无线网络中的自适应资源分配）&lt;/p&gt;
-&lt;p&gt;年份：2019&lt;/p&gt;
-&lt;p&gt;期刊：IEEE Transactions on Wireless Communications&lt;/p&gt;
-&lt;p&gt;摘要：提出了一种基于区块链的移动边缘计算 (B-MEC) 框架，用于未来无线网络中的自适应资源分配和计算卸载，其中区块链作为覆盖系统提供管理和控制功能。框架部署了基于实用拜占庭容错 (PBFT) 和委托权益证明 (DPoS) 的共识协议，计算任务执行由智能合约自组织。将频谱分配、块大小和每个生产者的生产块数量制定为联合优化问题，其中考虑了时变无线链路和 MEC 服务器的计算能力。利用深度强化学习DRL和Double-Dueling DQN 来解决此问题。&lt;/p&gt;
-&lt;h2 id=&#34;主要贡献&#34;&gt;主要贡献：&lt;/h2&gt;
+                <content type="html">&lt;h1 id=&#34;多智能体深度强化学习multi-agent-deep-reinforcement-learningmdrl&#34;&gt;多智能体深度强化学习（Multi-agent Deep Reinforcement Learning，MDRL）&lt;/h1&gt;
+&lt;h2 id=&#34;基本概念&#34;&gt;基本概念&lt;/h2&gt;
+&lt;p&gt;单智能体系统：智能体只需要根据自身的动作和环境的交互即可完成学习的任务。&lt;/p&gt;
+&lt;p&gt;多智能体系统：每个智能体不仅需要考虑自身动作对环境造成的影响和获得的回报，还需要观测其他智能体的行为和影响。&lt;/p&gt;
+&lt;p&gt;强化学习：通常将待解决的问题描述为 马尔科夫决策过程。&lt;/p&gt;
+&lt;p&gt;多智能体深度强化学习：在多智能体系统中，马尔科夫决策过程被拓展为 马尔科夫博弈（又称为随机博弈，Markov/stochastic game）。&lt;/p&gt;
+&lt;p&gt;马尔科夫博弈中的纳什均衡（Nash equilibrium）：在多个智能体中达成的一个不动点。对于其中任意一个智能体来说，当其他智能体策略确定时，任一智能体都无法通过采取其他的策略来获得更高的累积回报。也就是说，每个人的策略都是对其他人的策略的最优策略。&lt;/p&gt;
+&lt;h2 id=&#34;多智能体的关系模式&#34;&gt;多智能体的关系模式&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;考虑到异构无线网络和 MEC 的特性引起的问题，开发了一个 B-MEC 框架，用于未来无线网络中的自适应资源分配和计算卸载。该框架部署了基于实用拜占庭容错 (PBFT) 和委托权益证明 (DPoS) 的共识协议。&lt;/li&gt;
-&lt;li&gt;提出了共识协议的细节和理论分析，其中计算任务执行由智能合约自组织。&lt;/li&gt;
-&lt;li&gt;通过共同考虑智能合约中的计算任务执行和区块链共识维护，将频谱分配、块大小、块生产者生产的连续块数制定为优化问题，将其描述为马尔可夫决策过程（MDP）。&lt;/li&gt;
-&lt;li&gt;主要问题的目标是优化联合 MEC 和区块链系统的性能。为了处理该系统的高动态性，使用了一种新颖的深度强化学习 (DRL) 方法和 Double-Dueling DQN 来解决此问题。&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;智能体之间为竞争关系&lt;/p&gt;
+&lt;p&gt;每个智能体都为得到自己的最大奖励而竞争，每个智能体都有自己的奖励值。智能体的目标是最大化自身的奖励值，同时尽可能最小化对方奖励值。典型的算法有：minimax Q-learning 算法。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;智能体之间是半合作半竞争关系&lt;/p&gt;
+&lt;p&gt;智能体的奖励函数之间并没有确定的正负关系，目标是要多个智能体共同达到一个均衡点，这类问题通常与博弈论中的纳什均衡概念相关。典型的算法有：Nash Q -learning（纳什Q学习）、Correlated Q -learning（相关Q学习）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;智能体之间为合作关系&lt;/p&gt;
+&lt;p&gt;智能体之间为合作关系的时候，所有智能体都在为共同目标努力，因此获得的奖励是相同的。典型的算法有：Team Q-learning（团队Q学习）、Distributed Q -learning（分布式Q学习）。&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;网络框架&#34;&gt;网络框架&lt;/h2&gt;
-&lt;h3 id=&#34;框架结构图&#34;&gt;框架结构图&lt;/h3&gt;
-&lt;img src=&#34;https://llc-typora.oss-cn-hangzhou.aliyuncs.com/typora/image-20230508155902741.png&#34; alt=&#34;image-20230508155902741&#34; style=&#34;zoom:50%;&#34; /&gt;
-&lt;ul&gt;
-&lt;li&gt;Clients：本系统中的移动用户，向B-MEC系统提交卸载请求。&lt;/li&gt;
-&lt;li&gt;Replicas or block producers：具有 MEC 服务器的 BS，从 BS 中选择并使用区块链技术提供卸载服务。&lt;/li&gt;
-&lt;li&gt;Primary node：从所有副本中选出的副本，被授权在某个时间段生产区块。&lt;/li&gt;
-&lt;li&gt;Backup nodes or validators（备份节点或验证器）：除主节点外的区块生产者，它们扮演验证者的角色。&lt;/li&gt;
-&lt;li&gt;Transactions：用户产生的卸载请求，由区块生产者处理。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;请求处理流程&#34;&gt;请求处理流程&lt;/h3&gt;
-&lt;p&gt;在网络中，卸载请求被所有 BS 监听。当轮到自己出块时，主节点使用智能合约验证和处理交易。然后将计算结果发回给用户，并将交易打包到一个新的区块中。之后，进入共识程序，在节点之间达成共识后，该区块被附加到区块链中。&lt;/p&gt;
-&lt;h2 id=&#34;系统模型&#34;&gt;系统模型&lt;/h2&gt;
-&lt;h3 id=&#34;网络模型&#34;&gt;网络模型&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;块生产者从 BS 中选择，BS 由$B=\lbrace  B_{1} , ..., B_{n}, ..., B_{N} \rbrace $索引。每个BS配备一个 MEC 服务器，计算能力用 $F_{B_n}$（以 Hz 为单位）表示。&lt;/li&gt;
-&lt;li&gt;基站周围有 M 个用户，用户由$U=\lbrace  U_{1} , ..., U_{m}, ..., U_{M} \rbrace $ 表示。&lt;/li&gt;
-&lt;li&gt;在区块链系统中，共识协议采用 DPoS 和 PBFT 的思想，PBFT 在故障节点少于 (N − 1)/3 个时提供安全性。&lt;/li&gt;
-&lt;li&gt;在B-MEC系统中，假设N个区块生产者在时间间隔 T（秒）内轮流生产 K 个区块，其大小为 $S_B$（比特）。 K 在不同时间段内变化，以说明无线网络的时变特性。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;通信模型&#34;&gt;通信模型&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;在B-MEC系统中，涉及两种类型的无线链路：1）从用户到BS的数据传输，2）BS之间的消息传递。&lt;/li&gt;
-&lt;li&gt;根据随时间变化的无线信道的特性，采用&lt;strong&gt;有限状态马尔可夫信道 (FSMC) 模型&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;根据接收到的信噪比 (SNR) 来定义信道状态。将接收信号的信噪比幅度划分为$L$个不重叠的电平，对应的阈值有$L+1$个，表示为$\lbrace   h_{l} ，l＝0，1，2，...，L\rbrace $，$h_{0}$和$h_{L}$表示SNR的最小和最大测量值。&lt;/li&gt;
-&lt;li&gt;有限马尔可夫链的可用状态集由$H =\lbrace   {H_{1} , H_{2}, ..., H_{l}, ..., H_{L}}   \rbrace $给出。令$\gamma $表示信道状态，其在时间段 $t$ 的实现由$\Gamma(t) $表示。即存在 $\gamma \in ( h_{l-1},h_{l} )$时，有$\Gamma(t)=H_{l}$。&lt;/li&gt;
-&lt;li&gt;基于 FSMC 模型，令 $\Gamma_{U_{m},B_{n}}$为从用户 $U_{m}$到 BS $U_{m}$的 SNR，$\Gamma_{B_{n},B_{{n}&#39; }}$ 为从 BS$ B_{n}$到 BS $B_{{n}&#39; }$ 的 SNR。&lt;/li&gt;
-&lt;li&gt;考虑多播 OFDMA ，其中一个发射器使用一个子信道将相同的消息多播到多个接收器。假设在整个频谱带宽 W 上存在 E 个具有相同带宽 $W_0$ 的子信道，其中 E≥M+N。&lt;/li&gt;
-&lt;li&gt;考虑每个用户和 BS 都有机会成为一个多播组的发送器。假设用户 $U_m$分配了 $W_{U_m}$个子信道，BS $B_n$分配了 $W_{B_n}$个子信道。&lt;/li&gt;
-&lt;li&gt;用户 $U_{m}$到 BS $U_{m}$的接收数据速率：$R_{U_{m},B_{n}}=W_{U_{m}}W_{0}\log_{}{ ( 1+\Gamma_{U_{m},B_{n}}  ) }$&lt;/li&gt;
-&lt;li&gt;BS $ B_{n}$到 BS $B_{{n}&#39; }$ 的接收数据速率：$R_{B_{n},B_{n{}&#39; }}=W_{B_{n}}W_{0}\log_{}{ ( 1+\Gamma_{B_{n},B_{n{}&#39; }}  ) }$&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;计算模型&#34;&gt;计算模型&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;每个 BS 需要处理来自不同块的不同计算任务，即执行智能合约、生成和验证签名、生成和验证 MAC。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;一个 BS 收到消息后，它包含某些计算任务。假设消息 s 的计算任务用二元组 $I_s=\lbrace  d_s,f_s \rbrace $表示，其中 $d_s$ 表示消息 s 的数据大小，而 $f_s$ 是完成该任务的总 CPU 周期。特别地，定义 $s ∈ \lbrace  p, v \rbrace $，其中 p 表示生成而 v 表示验证。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;用 $F_s$ 表示分配给一条消息的计算能力（以 Hz 或每秒 CPU 周期为单位）。在这个系统中，一个基站可以同时处理不同的消息。（主节点需要在验证来自其他 BS 的其他消息的同时产生块）。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;将 $F_s$ 的演化建模为有限状态马尔可夫过程。计算能力被划分为 Y 个不重叠的级别，表示为 $C=\lbrace C_1,\dots ,C_Y \rbrace$。 $F_s$ 在时间段 t 的实现为 $Ψ_s(t) = C_y$，当有 $F_s ∈ [c_{y-1}, c_y]$ 时。有 $C_y$ ∈ C 并且 $c_0 = 0 &amp;lt; c_1 &amp;lt; ... &amp;lt; c_Y = F_{max}$，其中 $F_{max}$ 表示处理 BS 的最大计算能力。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;假设分配给消息 s 的计算能力在一个特定时间段内是恒定的，但它会根据转移概率演化到下一状态。令 $q_{x,y}$ 表示 $Ψ_s(t)$ 在时间段 t 从状态 x 移动到状态 y 的概率。 Y × Y 状态转移概率矩阵定义为 $Q=\lbrack q_{x,y} \rbrack_{Y×Y}$ ，其中我们有 $q_{x,y} = Pr(Ψ_s(t + 1) = y|Ψ_s(t) = x)$ 和 $x , y ∈ C$。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;定义BS $B_n$分配给消息 s 的计算资源为$Ψ_{Bn,s}(t)$。完成任务 $I_s$ 在 BS $B_n$ 的执行时间为$T_{B_{n},s}=\frac{f_{s}}{\Psi_{B_{n},s}(t)}$。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;共识协议&#34;&gt;共识协议&lt;/h2&gt;
-&lt;h3 id=&#34;request&#34;&gt;Request&lt;/h3&gt;
-&lt;p&gt;假设卸载任务的计算包含在智能合约的执行中。假设执行一笔交易的智能合约、生成或验证一个签名、生成或验证一个 MAC 分别需要 α、β 和 θ 个 CPU 周期。&lt;/p&gt;
-&lt;p&gt;请求过程发生在块间隔 $ \frac{T}{K} $ 内。&lt;/p&gt;
-&lt;p&gt;假设一笔交易的平均规模用 $\varpi $ 表示。考虑到一个区块的大小，一个区块中可以包含的最大交易数为 $ \frac{S_{B}}{\varpi} $。&lt;/p&gt;
-&lt;h3 id=&#34;pre-prepare&#34;&gt;Pre-prepare&lt;/h3&gt;
-&lt;h3 id=&#34;prepare&#34;&gt;Prepare&lt;/h3&gt;
-&lt;h3 id=&#34;reply&#34;&gt;Reply&lt;/h3&gt;
-&lt;h2 id=&#34;性能分析&#34;&gt;性能分析&lt;/h2&gt;
-&lt;h3 id=&#34;对于mec系统&#34;&gt;对于MEC系统&lt;/h3&gt;
-&lt;p&gt;时延由三部分组成：向BS提交请求；执行卸载任务（执行智能合约）；将结果返回给用户。&lt;/p&gt;
-&lt;p&gt;提交请求传输时延：$T_{req}^{tr} $；执行卸载任务时延：排队时延（$T^{q}$）+ 执行时延（$T^{e}$）&lt;/p&gt;
-&lt;p&gt;不考虑返回过程时延，因为输出的大小可能比输入数据小得多。&lt;/p&gt;
-&lt;h3 id=&#34;区块链系统&#34;&gt;区块链系统&lt;/h3&gt;
-&lt;p&gt;性能指标：吞吐量、最终确定时间/确认延迟时间、去中心化、安全性。&lt;/p&gt;
-&lt;h2 id=&#34;问题描述&#34;&gt;问题描述&lt;/h2&gt;
-&lt;p&gt;为了提高这个系统的吞吐量，将频谱分配、块大小、每个副本产生的块数进行联合优化，问题表述为马尔科夫决策过程（MDP）。&lt;/p&gt;
-&lt;h3 id=&#34;状态&#34;&gt;状态&lt;/h3&gt;
-&lt;p&gt;网络状态包括用户与基站之间的信噪比、不同基站之间的信噪比、基站分配给不同消息的计算资源、主节点ID。时间段 t 的网络状态 s(t) 表示为：&lt;img src=&#34;https://llc-typora.oss-cn-hangzhou.aliyuncs.com/typora/image-20230509163711529.png&#34; alt=&#34;image-20230509163711529&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;动作&#34;&gt;动作&lt;/h3&gt;
-&lt;p&gt;本文关注频谱分配、块大小、一个块生产者生产的连续块的数量。令A(t) 表示时间段 t 的动作，可以表示为：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://llc-typora.oss-cn-hangzhou.aliyuncs.com/typora/image-20230509163727322.png&#34; alt=&#34;image-20230509163727322&#34;&gt;&lt;/p&gt;
-&lt;p&gt;其中，前两行分别表示用户和 BS 的频谱分配指标，$S_B(t)$ 表示时间段 t 的块大小，K(t) 表示时间段 t 的连续块数。&lt;/p&gt;
-&lt;h3 id=&#34;奖励函数&#34;&gt;奖励函数&lt;/h3&gt;
-&lt;p&gt;本文旨在通过对动作空间做出决策来最大化联合 MEC 和区块链系统的性能。奖励函数被设计为：&lt;/p&gt;
-&lt;img src=&#34;https://llc-typora.oss-cn-hangzhou.aliyuncs.com/typora/image-20230509164938154.png&#34; alt=&#34;image-20230509164938154&#34; style=&#34;zoom:50%;&#34; /&gt;
-&lt;p&gt;其中 $R(S_{B},K,W)= {\textstyle \sum_{t{}&#39;=t}^{T} \epsilon ^{t{}&#39;-t}r(t)}$ 表示时间段T内的长期奖励。$\epsilon\in [0,1)$ 是折扣率，表示未来奖励的权重。对于固定的 t，$\epsilon$ 越大，未来奖励 r(t) 的影响越大。对于固定的 $\epsilon$，当 $t{}&#39;-t$ 足够大时，$\epsilon ^{t{}&#39;-t}$ 接近于零，这意味着随着时间的推移，未来奖励对长期奖励的影响较小。&lt;/p&gt;
-&lt;p&gt;采用惩罚函数的思想，我们将即时奖励 r(t) 定义为：&lt;/p&gt;
-&lt;img src=&#34;https://llc-typora.oss-cn-hangzhou.aliyuncs.com/typora/image-20230509170417592.png&#34; alt=&#34;image-20230509170417592&#34; style=&#34;zoom:50%;&#34; /&gt;
-&lt;p&gt;约束条件 C1 和 C2 分别表示最终确定时间和去中心化的限制。 C3表示分配的子信道不应超过系统无线资源总量。 C4 表示回程容量限制。$θ_B$和$θ_M∈[0, 1]$是区块链系统和MEC系统对应的权重。并且有 $θ_B + θ_M = 1$。&lt;/p&gt;
-&lt;p&gt;注意：权重可以是动态的，这表明这两个系统的动态偏好。为了便于建模，假设权重在一个时间段内保持不变，而可以在不同的时间段内发生变化。&lt;/p&gt;
-&lt;h2 id=&#34;解决方法&#34;&gt;解决方法&lt;/h2&gt;
-&lt;p&gt;为了解决所提出的问题，提出了一种基于离线 DRL 的方法。首先训练 Double-Dueling DQN 模型以离线方式学习最优策略。模型训练完成后，B-MEC系统可以使用它在线联合分配无线资源，决定每个副本的区块大小和连续出块数。与在线学习方法相比，它避免了较长的训练时间。&lt;/p&gt;
-&lt;h2 id=&#34;实验仿真&#34;&gt;实验仿真&lt;/h2&gt;
-&lt;h3 id=&#34;参数设置&#34;&gt;参数设置&lt;/h3&gt;
-&lt;p&gt;对于Double-Dueling DQN，本文在主网络和目标网络中使用了四个全连接层。前 3 层分别有 256、256 和 128 个神经元。第四层神经层分为 Advantage（动作优势）和 Value（状态值）函数。在最后一层，Advantage 和 Value 函数合并为 Q 值。&lt;/p&gt;
-&lt;img src=&#34;https://llc-typora.oss-cn-hangzhou.aliyuncs.com/typora/image-20230509170913328.png&#34; alt=&#34;image-20230509170913328&#34; style=&#34;zoom:50%;&#34; /&gt;
-&lt;h3 id=&#34;实验对比&#34;&gt;实验对比&lt;/h3&gt;
-&lt;h4 id=&#34;不同折扣率-discount-rate&#34;&gt;不同折扣率 discount rate&lt;/h4&gt;
-&lt;img src=&#34;https://llc-typora.oss-cn-hangzhou.aliyuncs.com/typora/image-20230509173653557.png&#34; alt=&#34;image-20230509173653557&#34; style=&#34;zoom:50%;&#34; /&gt;
-&lt;p&gt;在 DRL 中，通过优化长期奖励来选择动作，其中未来奖励通过乘以折扣率来实现。学习代理将选择以较小的折扣率最大化当前奖励的动作，反之亦然。由于当前的行动会影响本文中的未来奖励，因此长期奖励随着贴现率的增加而增加。然而，在一个不稳定的系统中，对未来赋予过多的权重是没有意义的。此外，它会导致高计算复杂度。为了探索性能和计算复杂性之间的权衡，应该选择合适的折扣率，在其余模拟中将其设置为 0.9。&lt;/p&gt;
-&lt;h4 id=&#34;不同mini-batch&#34;&gt;不同mini-batch&lt;/h4&gt;
-&lt;img src=&#34;https://llc-typora.oss-cn-hangzhou.aliyuncs.com/typora/image-20230509173637980.png&#34; alt=&#34;image-20230509173637980&#34; style=&#34;zoom:50%;&#34; /&gt;
-&lt;p&gt;随着 mini-batch 大小的增加，收敛速度更快，这是因为更多的经验用于训练具有更大 mini-batch 大小的 Q 网络。与其他参数类似，应选择合适的小批量大小，在其余模拟中将其设置为 64。&lt;/p&gt;
-&lt;h4 id=&#34;不同drl方法&#34;&gt;不同DRL方法&lt;/h4&gt;
+&lt;h2 id=&#34;合作关系的-mdrl-方法&#34;&gt;合作关系的 MDRL 方法&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;DQN；&lt;/li&gt;
-&lt;li&gt;Double DQN；&lt;/li&gt;
-&lt;li&gt;Dueling DQN；&lt;/li&gt;
-&lt;li&gt;Double-Dueling DQN&lt;/li&gt;
+&lt;li&gt;无协作学习：智能体之间没有协作机制，每个智能体将其他智能体看作环境的一部分，智能体独立地与环境进行交互并自发地形成行为策略。&lt;/li&gt;
+&lt;li&gt;通信学习（显式通信）：通信机制允许每个智能体根据自身的局部观测和从其他智能体接收到的信息动态调整自己的策略，而非简单将其他智能体视为环境的一部分。&lt;/li&gt;
+&lt;li&gt;协作学习（隐式通信）：智能体通过一个集中式的 Critic 网络接收所有智能体的局部观测进行训练，而执行时智能体仅依靠自身的观测进行决策。协作学习的实现方法分为两类：基于值函数分解(Value Function Decomposition, VFD)的协作学习和基于中心化值函数（Centralized Value Function, CVF）的协作学习。&lt;/li&gt;
+&lt;li&gt;建模学习：智能体在不知道其他智能策略的情况下，通过对其他智能体建模的方式分析并预测其行为。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;img src=&#34;https://llc-typora.oss-cn-hangzhou.aliyuncs.com/typora/image-20230509173617279.png&#34; alt=&#34;image-20230509173617279&#34; style=&#34;zoom:50%;&#34; /&gt;
-&lt;h4 id=&#34;四种优化方案&#34;&gt;四种优化方案&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;联合优化频谱分配、块大小、块数。&lt;/li&gt;
-&lt;li&gt;固定频谱分配的方案，其中学习代理只需要确定最佳块大小和每个副本的连续生产块的数量。&lt;/li&gt;
-&lt;li&gt;提出的固定块大小的方案，其中块大小设置为1 MB。&lt;/li&gt;
-&lt;li&gt;提议的固定块数方案，每个块生产者在一个时间段内可以生产固定数量的块&lt;/li&gt;
-&lt;li&gt;现有的静态方案，其中通过最大化即时奖励来做出决策。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;img src=&#34;https://llc-typora.oss-cn-hangzhou.aliyuncs.com/typora/image-20230509173554242.png&#34; alt=&#34;image-20230509173554242&#34; style=&#34;zoom:50%;&#34; /&gt;
-&lt;p&gt;现有的静态方案最先收敛，但在奖励方面表现最差。这是因为决策是根据当前的奖励做出的，需要较少的训练步骤，它没有考虑当前动作对未来奖励的影响，显然获得了最低的奖励。其次，所提出的方案比其他三个方案保持更高的长期回报。通过自适应频谱分配策略，可以减少延迟。有了自适应块大小和正确选择的生产块，可以改善区块链系统的吞吐量。&lt;/p&gt;
 </content>
             
             
@@ -167,7 +70,7 @@
                             
                             
                             
-                                <category scheme="https://famousli.cn/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/" term="论文笔记" label="论文笔记" />
+                                <category scheme="https://famousli.cn/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/" term="强化学习" label="强化学习" />
                             
                         
                     
@@ -178,102 +81,41 @@
         </entry>
     
         <entry>
-            <title type="text">论文阅读笔记（二）| Deep Reinforcement Learning for Online Offloading in Wireless Powered Mobile-Edge Computing Networks</title>
-            <link rel="alternate" type="text/html" href="https://famousli.cn/notes/mecnote2/" />
-            <id>https://famousli.cn/notes/mecnote2/</id>
-            <updated>2023-06-21T10:51:21&#43;08:00</updated>
-            <published>2023-06-17T19:04:14&#43;08:00</published>
+            <title type="text">DDPG算法</title>
+            <link rel="alternate" type="text/html" href="https://famousli.cn/tech/drl-ddpg/" />
+            <id>https://famousli.cn/tech/drl-ddpg/</id>
+            <updated>2023-06-21T11:00:41&#43;08:00</updated>
+            <published>2023-06-17T16:52:04&#43;08:00</published>
             <author>
                     <name>李清华</name>
                     <uri>https://famousli.cn/</uri>
                     <email>famousli2799@gmail.com</email>
                     </author>
-            <summary type="html">标题：Deep Reinforcement Learning for Online Offloading in Wireless Powered Mobile-Edge Computing Networks（无线供电移动边缘计算网络中在线卸……</summary>
+            <summary type="html">DDPG算法 DDPG算法一共包含了四个网络，分别是：Actor网络，Actor目标网……</summary>
             
-                <content type="html">&lt;p&gt;标题：Deep Reinforcement Learning for Online Offloading in Wireless Powered Mobile-Edge Computing Networks（无线供电移动边缘计算网络中在线卸载的深度强化学习）&lt;/p&gt;
-&lt;p&gt;年份：2020&lt;/p&gt;
-&lt;p&gt;期刊：IEEE Transactions on Mobile Computing&lt;/p&gt;
-&lt;p&gt;摘要：提出了一种基于深度强化学习的在线卸载 (DROO) 框架，该框架实现了一个深度神经网络来生成卸载决策。避免了一些现有强化学习方法遇到的维度灾难问题，并且在大型网络中计算效率高。为了进一步降低计算复杂度，我们提出了一种自适应程序，可以动态自动调整 DROO 算法的参数。数值结果表明，与现有方法相比，所提出的算法可以实现接近最优的性能，同时将计算时间显着减少一个数量级以上。例如，在 30 个用户的网络中，复杂度从几秒减少到不到 0.1 秒，即使在快速衰落的环境中，实时和优化的卸载设计也真正可行。&lt;/p&gt;
-&lt;h2 id=&#34;主要贡献&#34;&gt;主要贡献&lt;/h2&gt;
+                <content type="html">&lt;h1 id=&#34;ddpg算法&#34;&gt;DDPG算法&lt;/h1&gt;
+&lt;p&gt;DDPG算法一共包含了四个网络，分别是：Actor网络，Actor目标网络，Critic网络，Critic目标网络，2个Actor 网络的结构相同，2个Critic网络的结构相同，四个网络的功能如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Actor网络：负责策略网络参数 $\theta$ 的迭代更新，负责根据当前状态 S 选择当前动作 A，用于和环境交互生成 S&#39; 和 R。&lt;/li&gt;
+&lt;li&gt;Actor目标网络：负责根据经验回放池中采样的下一状态 S&#39; 选择最优下一动作 A&#39;，网络参数 $\theta&#39;$ 定期从 $\theta$ 中更新。&lt;/li&gt;
+&lt;li&gt;Critic网络：负责价值网络参数 $w$ 的迭代更新，负责计算当前Q值 $Q(S,A,w)$。&lt;/li&gt;
+&lt;li&gt;Critic目标网络：负责计算目标Q值 $y_i=R+\gamma Q&#39;(S&#39;,A&#39;,w&#39;)$ 中的 $Q&#39;(S&#39;,A&#39;,w&#39;)$ 部分，网络参数 $w&#39;$ 定期从  $w$ 更新。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;ddpg算法流程&#34;&gt;DDPG算法流程&lt;/h1&gt;
 &lt;ol&gt;
-&lt;li&gt;提出了一种基于深度强化学习的在线卸载算法 DROO，DROO算法完全消除了解决复杂混合整数规划问题的需要，从而避免了现有优化和启发式方法遇到的最优效率权衡。&lt;/li&gt;
-&lt;li&gt;设计了保序量化和自适应参数设置方法以实现快速算法收敛。&lt;/li&gt;
+&lt;li&gt;先初始化 Actor 和 Critic。然后把 Actor 和 Critic 的网络参数复制到目标 Actor 和目标 Critic 网络。&lt;/li&gt;
+&lt;li&gt;将网络环境状态 S 输入 Actor网络得到动作 A，对环境施加动作 A，环境返回下一时刻的状态 S&#39; 以及奖励 R。并将这个四元组 $（S,A,R,S&#39;）$ 存入经验池。&lt;/li&gt;
+&lt;li&gt;Critic 网络的更新。在经验池中积累一定数量的数据后，取出 mini-batch 大小的数据块，输入到 Critic 网络中，得到动作价值函数$Q(S,A,w)$。再将下一时刻状态 S&#39; 、动作 A&#39; 和上一时刻的奖励 R 一起输入目标 Critic 网络中，得到目标 Critic 网络的$Q_{target}=R+Q&#39;(S&#39;,A&#39;)$。Critic作为评委，一开始也不知道 Actor 输出的动作是否足够好，它也需要一步一步学习给出准确的打分，所以借助于目标网络拟合的下一时刻的价值 $Q&#39;$ ，以及真实的收益 $R$，我们可以得到 $Q_{target}$，让$Q_{target}$减去当前$Q$求均方差构造出Loss，再进行梯度下降来更新 Critic 网络参数。&lt;/li&gt;
+&lt;li&gt;Actor 网络的更新。Actor的目标是找到最优动作 A 使得动作价值 Q 输出最大。因此，将通过将状态 S 以及 Actor 网络输出的动作 A 传入给 Critic 得到的结果$Q(S,A,w)$前面加负号作为损失函数，之后对其进行梯度下降进而实现 Actor 网络参数的更新。&lt;/li&gt;
+&lt;li&gt;目标 Actor 网络和目标 Critic 网络的更新。我们每隔一段时间就把 Actor 网络和 Critic 网络的参数，拿去进行软更新目标 Actor网络和目标Critic 网络。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;系统模型&#34;&gt;系统模型&lt;/h2&gt;
-&lt;img src=&#34;https://llc-typora.oss-cn-hangzhou.aliyuncs.com/typora/image-20230505190402304.png&#34; alt=&#34;image-20230505190402304&#34; style=&#34;zoom: 33%;&#34; /&gt;
-&lt;ul&gt;
-&lt;li&gt;无线供电MEC网络由1个AP（access point）和N个WD（wireless devices）组成。&lt;/li&gt;
-&lt;li&gt;AP供电稳定，可以向WD广播射频能量。&lt;/li&gt;
-&lt;li&gt;每个 WD 都有一个可充电电池，可以存储收集的能量，为设备的运行提供动力。&lt;/li&gt;
-&lt;li&gt;假定 AP 具有比 WD 更高的计算能力，以便 WD 可以将其计算任务卸载到 AP。&lt;/li&gt;
-&lt;li&gt;假设 WPT （wireless power transfer）和通信（计算卸载）在同一频带中执行。&lt;/li&gt;
-&lt;li&gt;在每个设备处实施时分复用（TDD）电路以避免WPT和通信之间的相互干扰。&lt;/li&gt;
-&lt;li&gt;h~i~ 表示标记时间帧中 AP 和第 i 个 WD 之间的无线信道增益。&lt;/li&gt;
-&lt;li&gt;二进制卸载：$x_i ∈   { 0,1  }$ 为指示变量，其中 $x_i = 1$ 表示第 i 个用户的计算任务被卸载到 AP（如图WD1和WD3），$x_i = 0$ 表示任务在本地计算（如图WD2）。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;问题表述&#34;&gt;问题表述&lt;/h2&gt;
-&lt;img src=&#34;https://llc-typora.oss-cn-hangzhou.aliyuncs.com/typora/image-20230506213341358.png&#34; alt=&#34;image-20230506213341358&#34; style=&#34;zoom:50%;&#34; /&gt;
-&lt;p&gt;$Q(h,x,\tau ,\alpha )$：无线供电的 MEC 网络的加权和计算速率&lt;/p&gt;
-&lt;p&gt;$\tau _i$：表示为第 i 个 WD 的卸载时间，$\tau _i∈ [0, 1]$&lt;/p&gt;
-&lt;p&gt;$\alpha$：在时间帧的开始，$\alpha$T 时间量用于 WPT，$\alpha ∈ [0, 1]$&lt;/p&gt;
-&lt;p&gt;问题（P1）：对于具有通道实现 h 的每个时间帧，求最大化加权和计算速率&lt;/p&gt;
-&lt;img src=&#34;https://llc-typora.oss-cn-hangzhou.aliyuncs.com/typora/image-20230506213035889.png&#34; alt=&#34;image-20230506213035889&#34; style=&#34;zoom:50%;&#34; /&gt;
-&lt;p&gt;问题(P1)是混合整数规划非凸问题，求解难度大。如果给定 x，(P1) 就简化为如下凸问题：&lt;/p&gt;
-&lt;img src=&#34;https://llc-typora.oss-cn-hangzhou.aliyuncs.com/typora/image-20230506215039239.png&#34; alt=&#34;image-20230506215039239&#34; style=&#34;zoom:50%;&#34; /&gt;
-&lt;p&gt;问题（P1）可以分解为两个子问题：卸载决策和资源分配（P2）&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;卸载决策：需要在 2N 个可能的卸载决策中搜索以找到最优或次优卸载决策 x&lt;/p&gt;
-&lt;p&gt;本文中提出了一种基于深度强化学习的在线卸载（DROO）算法。DROO 算法可以在信道分布发生变化时自动更新其卸载决策策略，并且可以在解决卸载决策问题时实现毫秒级的计算时间，更适合动态无线应用。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;资源分配：可以有效地解决凸问题 (P2) 的最佳时间分配 $\lbrace \alpha^{\ast}, \tau _i^{\ast} \rbrace$&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;droo-算法&#34;&gt;DROO 算法&lt;/h2&gt;
-&lt;h3 id=&#34;概述&#34;&gt;概述&lt;/h3&gt;
-&lt;p&gt;基于深度强化学习的在线卸载算法 DROO，旨在具有二进制计算卸载的无线供电 MEC 网络中最大化加权和计算率。该算法不需要任何手动标记的训练数据，并从过去的卸载经验中学习，以通过强化学习改进 DNN 产生的卸载动作。与传统的优化方法相比，所提出的 DROO 算法完全消除了解决复杂混合整数规划问题的需要。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://llc-typora.oss-cn-hangzhou.aliyuncs.com/typora/image-20230507152152641.png&#34; alt=&#34;image-20230507152152641&#34;&gt;&lt;/p&gt;
-&lt;p&gt;DROO 算法由两个交替阶段组成：卸载动作生成和卸载策略更新。&lt;/p&gt;
-&lt;h3 id=&#34;droo算法&#34;&gt;DROO算法&lt;/h3&gt;
-&lt;img src=&#34;https://llc-typora.oss-cn-hangzhou.aliyuncs.com/typora/image-20230507164155763.png&#34; alt=&#34;image-20230507164155763&#34; style=&#34;zoom:50%;&#34; /&gt;
-&lt;h3 id=&#34;k的自适应设置&#34;&gt;K的自适应设置&lt;/h3&gt;
-&lt;p&gt;DROO 算法的主要计算复杂度来自于在每个时间帧中求解 (P2) K 次以选择最佳卸载动作。较大的 K 通常会导致在每个时间范围内做出更好的卸载决策，并相应地在长期内产生更好的卸载策略。因此，在设置 K 的值时存在基本的性能-复杂性权衡。&lt;/p&gt;
-&lt;img src=&#34;https://llc-typora.oss-cn-hangzhou.aliyuncs.com/typora/image-20230507170826786.png&#34; alt=&#34;image-20230507170826786&#34; style=&#34;zoom:50%;&#34; /&gt;
-&lt;p&gt;$K_t$ 表示为量化函数在第 t 个时间帧生成的二进制卸载动作的数量，并设置 $K_1 = N$，每隔 Δ 时间帧更新 $K_t$，其中 Δ 称为 K 的更新间隔。在更新时间帧上，$K_t$ 设置为 1 加上过去 Δ 时间帧中观察到的最大 $k_t^*$ 。对于 ∆ = 1 的极端情况，$K_t$ 在每个时间帧中更新。当 ∆ → ∞ 时， $K_t$不再更新，相当于设置一个常数 K = N。&lt;/p&gt;
-&lt;h3 id=&#34;dnn&#34;&gt;DNN&lt;/h3&gt;
-&lt;p&gt;在所提出的 DROO 算法中，由一个输入层、两个隐藏层和一个输出层组成DNN，其中第一和第二隐藏层分别具有 120 和 80 个隐藏神经元，并设置训练间隔 δ = 10，训练批量大小 batch size  = 128，内存大小为 1024。&lt;/p&gt;
-&lt;h2 id=&#34;实验结果分析&#34;&gt;实验结果分析&lt;/h2&gt;
-&lt;h3 id=&#34;收敛性能&#34;&gt;收敛性能&lt;/h3&gt;
-&lt;p&gt;归一化计算率 $\hat{Q} (h,x) ∈ [0, 1]$ 定义为：&lt;/p&gt;
-&lt;img src=&#34;https://llc-typora.oss-cn-hangzhou.aliyuncs.com/typora/image-20230507173856994.png&#34; alt=&#34;image-20230507173856994&#34; style=&#34;zoom:50%;&#34; /&gt;
-&lt;p&gt;其中分母中的最优解是通过枚举所有 2N 卸载动作获得的。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://llc-typora.oss-cn-hangzhou.aliyuncs.com/typora/image-20230507180855332.png&#34; alt=&#34;image-20230507180855332&#34;&gt;&lt;/p&gt;
-&lt;p&gt;蓝色曲线表示最近 50 个时间帧中 $\hat{Q}$ 的移动平均值，浅蓝色阴影表示最近 50 帧中 $\hat{Q}$ 的最大值和最小值。当 t 很大时，DROO 的移动平均值 $\hat{Q}$ 逐渐收敛到最优解。在 t &amp;gt; 400 的早期阶段，达到的平均值 $\hat{Q}$ 超过 0.98，并且随着 t 变大，例如当 t &amp;gt; 3000 时，方差逐渐减小到零。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://llc-typora.oss-cn-hangzhou.aliyuncs.com/typora/image-20230507180833497.png&#34; alt=&#34;image-20230507180833497&#34;&gt;&lt;/p&gt;
-&lt;p&gt;比较了两种量化方法的性能：所提出的保序量化方法和传统的 KNN 量化方法在不同的 K 下。&lt;/p&gt;
-&lt;p&gt;当 K = N 时，两种方法都收敛于最优卸载动作，即 $\hat{Q}$ 的移动平均值接近 1。但是，当 K 较小时，它们都实现了次优卸载动作。例如，当 K = 2 时，保序量化方法和 KNN 都只能收敛到 0.95 左右。&lt;/p&gt;
-&lt;p&gt;当 K ≥ 2 时，保序量化方法比 KNN 方法收敛得更快。直观上，这是因为保序量化方法比 KNN 方法在候选动作中提供了更大的多样性。因此，DNN 的训练需要在收敛前探索较少的卸载动作。&lt;/p&gt;
-&lt;p&gt;当 K = 1 时，两种量化方法的 DROO 算法都不会收敛。这是因为当没有动作选择时，DNN 无法改进其卸载策略。&lt;/p&gt;
-&lt;h3 id=&#34;更新间隔的影响-&#34;&gt;更新间隔的影响 ∆&lt;/h3&gt;
-&lt;p&gt;DROO 算法只有在设置足够大的 Δ 时才收敛到最优解，例如 Δ ≥ 16。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://llc-typora.oss-cn-hangzhou.aliyuncs.com/typora/image-20230507180631932.png&#34; alt=&#34;image-20230507180631932&#34;&gt;&lt;/p&gt;
-&lt;p&gt;当 t 很大时，$K_t$ 随 Δ 增加。这表明设置较大的 Δ 将导致更高的计算复杂度，即需要在一个时间范围内计算 (P2) 更多次。因此，在设置 Δ 时存在性能复杂性权衡。&lt;/p&gt;
-&lt;img src=&#34;https://llc-typora.oss-cn-hangzhou.aliyuncs.com/typora/image-20230507180557914.png&#34; alt=&#34;image-20230507180557914&#34; style=&#34;zoom:50%;&#34; /&gt;
-&lt;p&gt;为了正确选择更新间隔 Δ，实验进行了10000 个通道实现的总 CPU 时间与最后一个时间帧中 $\hat{Q}$ 的移动平均值之间的权衡。一方面，我们看到当 ∆ ≤ 16 时，$\hat{Q}$的平均值从 0.96 迅速增加到接近 1，而当我们进一步增加 ∆ 时，改进变得微不足道。另一方面，CPU 时间随 Δ 单调增加。为了在性能和复杂性之间取得平衡，本文的DROO 算法设置∆ = 32。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://llc-typora.oss-cn-hangzhou.aliyuncs.com/typora/image-20230507181011236.png&#34; alt=&#34;image-20230507181011236&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;计算速率性能&#34;&gt;计算速率性能&lt;/h3&gt;
-&lt;p&gt;DROO 算法与三个具有代表性的基准进行比较：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Coordinate Descent (CD) algorithm：坐标下降算法。CD 算法在每一轮中迭代交换 WD 的计算模式，从而导致最大的计算率改进。也就是说，从 $x_i = 0$ 到 $x_i = 1$，反之亦然。当不能通过计算模式交换进一步提高计算性能时，迭代停止。&lt;/li&gt;
-&lt;li&gt;Local Computing：本地计算。所有N个WD只进行局部计算，即设 $x_i = 0，i = 1，····，N$（P2中的N）。&lt;/li&gt;
-&lt;li&gt;Edge Computing：边缘计算。所有 N 个 WD 都将它们的任务卸载到 AP，即设置 $x_i = 0，i = 1，····，N$（P2中的N）。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;如下图，DROO 与 CD 方法实现了类似的近乎最优的性能，并且明显优于边缘计算和本地计算算法。&lt;/p&gt;
-&lt;img src=&#34;https://llc-typora.oss-cn-hangzhou.aliyuncs.com/typora/image-20230507175851143.png&#34; alt=&#34;image-20230507175851143&#34; style=&#34;zoom:50%;&#34; /&gt;
-&lt;h3 id=&#34;算法复杂度&#34;&gt;算法复杂度&lt;/h3&gt;
-&lt;p&gt;DROO 实现了与 CD 算法相似的速率性能，但需要的 CPU 时间却少得多。&lt;/p&gt;
-&lt;img src=&#34;https://llc-typora.oss-cn-hangzhou.aliyuncs.com/typora/image-20230507180122041.png&#34; alt=&#34;image-20230507180122041&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;注意：两个Critic 网络的输入不同。Critic 网络中，动作和状态需要一起输入到 Critic 中；Critic 目标网络中，需要将动作、状态以及上一时刻的奖励一起输入Critic 目标网络。&lt;/p&gt;
+&lt;img src=&#34;https://llc-typora.oss-cn-hangzhou.aliyuncs.com/typora/81be15e678ee87da6e19b066d0dcb34.jpg&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h1 id=&#34;ddpg关键技术&#34;&gt;DDPG关键技术&lt;/h1&gt;
+&lt;p&gt;DDPG算法主要包括以下三个关键技术：&lt;/p&gt;
+&lt;p&gt;（1）经验回放：智能体将得到的经验数据放入 Memory Pool 中，更新网络参数时按照批量采样。&lt;/p&gt;
+&lt;p&gt;（2）目标网络：在 Actor 网络和 Critic 网络外再使用一套用于估计目标的Target Actor网络和Target Critic网络。在更新目标网络时，为了避免参数更新过快，采用软更新方式。&lt;/p&gt;
+&lt;p&gt;（3）噪声探索：确定性策略输出的动作为确定性动作，缺乏对环境的探索。在训练阶段，给Actor网络输出的动作加入噪声，从而让智能体具备一定的探索能力。&lt;/p&gt;
 </content>
             
             
@@ -286,100 +128,7 @@
                             
                             
                             
-                                <category scheme="https://famousli.cn/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/" term="论文笔记" label="论文笔记" />
-                            
-                        
-                    
-                
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">论文阅读笔记（一）| BeCome: Blockchain-Enabled Computation Offloading for IoT in Mobile Edge Computing</title>
-            <link rel="alternate" type="text/html" href="https://famousli.cn/notes/mecnote1/" />
-            <id>https://famousli.cn/notes/mecnote1/</id>
-            <updated>2023-06-21T10:49:40&#43;08:00</updated>
-            <published>2023-06-17T19:00:14&#43;08:00</published>
-            <author>
-                    <name>李清华</name>
-                    <uri>https://famousli.cn/</uri>
-                    <email>famousli2799@gmail.com</email>
-                    </author>
-            <summary type="html">标题：BeCome: Blockchain-Enabled Computation Offloading for IoT in Mobile Edge Computing（BeCome：移动边缘计算中……</summary>
-            
-                <content type="html">&lt;p&gt;标题：BeCome: Blockchain-Enabled Computation Offloading for IoT in Mobile Edge Computing（BeCome：移动边缘计算中物联网的区块链计算卸载）&lt;/p&gt;
-&lt;p&gt;年份：2019&lt;/p&gt;
-&lt;p&gt;期刊：IEEE Transactions on Industrial Informatics&lt;/p&gt;
-&lt;p&gt;摘要：本文提出了一种名为 BeCome 的支持区块链的计算卸载方法。边缘计算采用区块链技术来确保数据完整性。采用非支配排序遗传算法 III (NSGA-III) 生成均衡资源分配策略。此外，使用简单加法加权 (SAW) 和多准则决策 (MCDM) 用于确定最佳卸载策略。&lt;/p&gt;
-&lt;h2 id=&#34;主要贡献&#34;&gt;主要贡献&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;本文提出了一种名为 BeCome 的支持区块链的计算卸载方法&lt;/li&gt;
-&lt;li&gt;采用&lt;strong&gt;非支配排序遗传算法 III (NSGA-III)&lt;/strong&gt; 生成均衡资源分配策略&lt;/li&gt;
-&lt;li&gt;采用简单加法加权（SAW）和多准则决策（MCDM）技术确定基于虚拟机迁移技术的最优方案。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;数学模型&#34;&gt;数学模型&lt;/h2&gt;
-&lt;h3 id=&#34;资源模型&#34;&gt;资源模型&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;假设有 Z 种 ECD，表示为 $EC = {ec_1, ec_2, . . . , ec_Z}$， $ec_z(z = {1, 2, · · · , Z})$ 有 S 个数据发送器，记为 $DT_z =  \lbrace dt_{z,1}, dt_{z,2},dt_{z,S}   \rbrace $。第 z 种 ECD 的数量设置为 N ，表示为$C_z =  \lbrace c_{z,1}, c_{z,2}, . . . , c_{z,N}  \rbrace$。&lt;/li&gt;
-&lt;li&gt;假设物联网中有 M 个智能设备，假设智能设备只能执行一项任务。第 $m ( m=\lbrace 1, 2, . . ., M \rbrace    )$ 台智能设备的计算任务记为 $k_m$。&lt;/li&gt;
-&lt;li&gt;通常，VM技术在物联网中的ECD资源管理方面功能强大，物理资源以VM实例的形式提供。$ec_z$中第n个ECD $  ( n=  \lbrace 1,2,\dots , N  \rbrace    )$ 的容量用VM实例的数量来衡量，表示为 $va_{z,n}$。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;定义 1（$k_m$的资源需求）：&lt;/strong&gt;$k_m$的资源需求由一个4元组定义，表示为 $r_m = (c_z, nv_m, st_m, ft_m)$。其中 $c_z, nv_m, st_m, ft_m$ 是$k_m$使用的ECD类型、$k_m$需要的VM数量、$k_m$占用的开始时间和$k_m$结束时间。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;时间消耗模型&#34;&gt;时间消耗模型&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;卸载时间模型&lt;/li&gt;
-&lt;li&gt;任务排队时间模型&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;卸载方法&#34;&gt;卸载方法&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;在区块链中使用分类账进行 ECD 资源监控&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;监控移动边缘计算中物联网的 ECD 和未占用 VM 实例的资源利用率&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;定义 2（VM 分配分类账）&lt;/strong&gt;：$c_{z,n}$ 的分配账本记为 $vat_{z,n}$，用于记录 $c_{z,n}$收到卸载请求时的 VM 分配情况。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;使用 NSGA-III 基于 VM 迁移的分配&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;NSGA-III 快速执行全局搜索并保证质量。变异操作还允许算法更快地收敛。考虑到本文的目的是解决多目标优化问题，与传统的遗传算法相比，NSGA-III更有效地找到合适的解决方案。&lt;/li&gt;
-&lt;li&gt;计算卸载策略由基因表示，适应度函数分为三类：时间消耗、能量消耗和负载平衡&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;使用 SAW 和 MCDM 进行迁移确认&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;根据种群中各目标函数值的最大值和最小值，首先对三个目标函数进行归一化&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;预先确定适应度函数的权重以评估解的效用值&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;第b条染色体的效用值记为：&lt;/p&gt;
-&lt;img src=&#34;https://llc-typora.oss-cn-hangzhou.aliyuncs.com/typora/image-20230504165233194.png&#34; alt=&#34;image-20230504165233194&#34; style=&#34;zoom:50%;&#34; /&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;选择具有最高效用值的最优策略作为最优策略&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-            
-            
-            
-            
-            
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://famousli.cn/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/" term="论文笔记" label="论文笔记" />
+                                <category scheme="https://famousli.cn/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/" term="强化学习" label="强化学习" />
                             
                         
                     
